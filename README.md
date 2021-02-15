@@ -156,7 +156,7 @@ Precision - 0.41
 Training process was performed using AWS EMR.
 Other methods weren't as effective as logistic regression. Moreover, even Cross Validation with Grid Search didn't improve the results. This may suggest that there should be more work done with feature engineering.
 
-Further investigation require data quality. There is a lot of information that should be further explored. Ideas:
+Data require further investigation. There is a lot of topics that should be further explored. Ideas:
 * features based on trends (decrease/increase of page views WoW or MoM)
 * investigate locations/levels/userAgents
 * investigate false-negatives
