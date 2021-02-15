@@ -1,9 +1,9 @@
 # Churn prediction with Spark and AWS EMR
 
-This is a repository of following Medium.com post: 
+This is a repository of following Medium.com post:
+
 https://kmwolowiec.medium.com/how-to-successfully-predict-churn-with-pyspark-and-aws-elastic-mapreduce-447437ecbae1
 
-I decided to use whole data set and AWS EMR. Unfortunately, I spent too much time on DevOPS-like things. I ended up with the logistic regression model having 0.76 recall on test set. I believe there is still room for improvement. 
 
 ## Motivation
 175 000 000 000 000 GB - this amount of data will be produced by the world population by 2025 according 
