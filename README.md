@@ -24,8 +24,8 @@ It can be used for multiple things like running distributed SQL, creating data p
 running Machine Learning algorithms, and much more. Spark is available on Java and Scala. There is also a Python API that is used in this project.
 
 The project consists of two notebooks:
-* Exploratory Data Analysis and training process performed on a sample of traffic data
-* Modelling & Evaluation performed on full dataset (~14Gb) using AWS Elastic Map Reduce cluster.
+* `EDA - saple data.ipynb` - Exploratory Data Analysis and training process performed on a sample of traffic data
+* `AWS EMR training.ipynb` - Modelling & Evaluation performed on full dataset (~14Gb) using AWS Elastic Map Reduce cluster.
 
 <p align="center">
 <img width="150" vertical-align="middle" src="img/enr.png"/>
