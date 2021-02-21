@@ -110,7 +110,7 @@ than average.
 There were 3 ML algorithms tested from Spark ML library: LogisticRegression, RandomForestClassifier and GBTClassifier (Gradient-Boosted Trees).
 
 Final features set:
-***C*** - *event count (in last 60 days)*
+***C*** - *event count (in last 30 (60) days)*
 ***CPS*** - *event count per session*
 
 ```
@@ -154,14 +154,15 @@ Final features set:
 
 
 ## Results & conclusions
-Best results have been achieved using logistic regression:
-Fscore - 0.54
-Recall - 0.76
-Precision - 0.41
-Training process was performed using AWS EMR.
-Other methods weren't as effective as logistic regression. Moreover, even Cross Validation with Grid Search didn't improve the results. This may suggest that there should be more work done with feature engineering.
+**Reflection**
+The churn prediction is a topic standing on the border of product analytics and business analytics and this is one of the reasons I decided to challenge this.
+The most profitable for me is exploring Spark and AWS. Spark itself is a great tool, however, it's not as simple as Pandas and Scikit-learn. Unfortunately, AWS EMR Notebook wasn't really helpful during the project. It's a great tool for data processing and exploration, however, when it comes to the training process I would suggest another solution than Notebooks. Moreover, built-in features for hyperoptimization are limited to grid search (at least in emr-20 with Spark 2.4.). Another disadvantage is relying on the stability of Your internet connection. Also, during longer training, sometimes dead session just occurs with really no clear reason. I spent a lot of time struggling with AWS EMR, while I could use this time for further data investigation and some improvements on a small dataset. Instead, I assumed that the amount of data blocks me (what was only a partly truth).
 
-Data require further investigation. There is a lot of topics that should be further explored. Ideas:
-* features based on trends (decrease/increase of page views WoW or MoM)
-* investigate locations/levels/userAgents
-* investigate false-negatives
+**Improvements**
+I can see tons of things that could be improved and require further exploration. The results have shown that there is still room for improvement. The best results came from the logistic regression model. Moreover, even the Gradient Boosted Trees combined with Cross-Validation and Grid Search didn't improve the results. This may suggest that there should be more work done with feature engineering. Provided data require further investigation. There is a lot of topics that should be further explored:
+a deeper investigation of the features and its impact (absolute features vs features "per session")
+introduce features based on trends (decrease/increase of page views WoW or MoM)
+investigate locations/levels/user-agents
+investigate false-negatives
+try other combinations of features
+further investigation of param grid builder and cross validator - the usage of both features didn't really improve the results during Stage I.
